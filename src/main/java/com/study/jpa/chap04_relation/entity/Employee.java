@@ -1,11 +1,11 @@
 package com.study.jpa.chap04_relation.entity;
 
 import lombok.*;
-import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 
-@Setter @Getter @ToString
+@Setter @Getter
+@ToString
 @EqualsAndHashCode(of="id")
 @NoArgsConstructor
 @AllArgsConstructor
@@ -26,4 +26,6 @@ public class Employee {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "dept_id")
     private Department department;
+
+
 }
